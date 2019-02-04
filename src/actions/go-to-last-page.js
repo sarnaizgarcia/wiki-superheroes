@@ -1,5 +1,5 @@
 export function actionGoToLastPage() {
   return {
-    type: "GO-TO-LAST-PAGE"
+    type: "GO_TO_LAST_PAGE"
   };
 }

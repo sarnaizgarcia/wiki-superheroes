@@ -1,5 +1,5 @@
 export function actionGoToFirstPage() {
   return {
-    type: "GO-TO-FIRST-PAGE"
+    type: "GO_TO_FIRST_PAGE"
   };
 }

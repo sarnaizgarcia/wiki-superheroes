@@ -1,5 +1,5 @@
 export function actionGoToPrevPage() {
   return {
-    type: "GO-TO-PREV-PAGE"
+    type: "GO_TO_PREV_PAGE"
   };
 }

@@ -1,5 +1,5 @@
 export function actionGoToNextPage() {
   return {
-    type: "GO-TO-NEXT-PAGE"
+    type: "GO_TO_NEXT_PAGE"
   };
 }
