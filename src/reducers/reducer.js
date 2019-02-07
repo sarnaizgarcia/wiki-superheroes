@@ -1,7 +1,7 @@
 import defaultState from "./default-state";
 
 function reducer(estado, accion) {
-  const newState = Object.assing({}, state);
+  const newState = Object.assign({}, estado);
   if (accion) {
     switch (accion.type) {
       case "GO_TO_FIRST_PAGE":
@@ -27,7 +27,7 @@ function reducer(estado, accion) {
       case "LENGTH":
         newState.tableHeroes.size = accion.payload.lenght;
         newState.tableHeroes.lastSize = Math.ceil(
-          dataTableHeroes.lenght / newState.tableHeroes.size
+          newState.dataTableHeroes.lenght / newState.tableHeroes.size
         );
         return newState;
         break;
@@ -38,3 +38,6 @@ function reducer(estado, accion) {
     return defaultState;
   }
 }
+
+
+export default reducer;
