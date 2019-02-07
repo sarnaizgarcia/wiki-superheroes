@@ -1,7 +1,7 @@
 import defaultState from "./default-state";
 
 function reducer(estado, accion) {
-  const newState = Object.assing({}, state);
+  const newState = Object.assign({}, estado);
   if (accion) {
     switch (accion.type) {
       case "GO_TO_FIRST_PAGE":
@@ -9,7 +9,7 @@ function reducer(estado, accion) {
         return newState;
         break;
       case "GO_TO_LAST_PAGE":
-        newState.tableHeroes.page = newState.tableHeroes.lastSize;
+        newState.tableHeroes.page = newState.tableHeroes.lastSize; //
         return newState;
         break;
       case "GO_TO_NEXT_PAGE":
@@ -27,16 +27,10 @@ function reducer(estado, accion) {
       case "LENGTH":
         newState.tableHeroes.size = accion.payload.lenght;
         newState.tableHeroes.lastSize = Math.ceil(
-          dataTableHeroes.lenght / newState.tableHeroes.size
+          newState.dataTableHeroes.lenght / newState.tableHeroes.size
         );
         return newState;
         break;
-      // case "SEARCH_HERO":
-      //   return;
-      //   break;
-      // case "SELECT_HERO":
-      //   return;
-      //   break;
       default:
         return estado;
     }
@@ -44,3 +38,6 @@ function reducer(estado, accion) {
     return defaultState;
   }
 }
+
+
+export default reducer;
