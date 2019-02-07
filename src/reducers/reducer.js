@@ -9,7 +9,7 @@ function reducer(estado, accion) {
         return newState;
         break;
       case "GO_TO_LAST_PAGE":
-        newState.tableHeroes.page = newState.tableHeroes.lastSize;
+        newState.tableHeroes.page = newState.tableHeroes.lastSize; //
         return newState;
         break;
       case "GO_TO_NEXT_PAGE":
@@ -31,12 +31,6 @@ function reducer(estado, accion) {
         );
         return newState;
         break;
-      // case "SEARCH_HERO":
-      //   return;
-      //   break;
-      // case "SELECT_HERO":
-      //   return;
-      //   break;
       default:
         return estado;
     }
