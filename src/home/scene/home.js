@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "../components/header";
 import SearchForm from "../components/search-form";
 import Table from "../components/table";
+import HeroesTable from "../containers";
 
 class Home extends Component {
   render() {
@@ -10,7 +11,7 @@ class Home extends Component {
         <Header titulo="Wiki de Super Heroes" icono="home" />
         <h1>Hola, soy home</h1>
         <SearchForm />
-        <Table />
+        <HeroesTable />
       </div>
     );
   }
