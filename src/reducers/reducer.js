@@ -2,14 +2,14 @@ import defaultState from "./default-state";
 
 function reducer(estado, accion) {
   const newState = Object.assign({}, estado);
-  if (accion) {
+  if (estado) {
     switch (accion.type) {
       case "GO_TO_FIRST_PAGE":
         newState.tableHeroes.page = 0;
         return newState;
         break;
       case "GO_TO_LAST_PAGE":
-        newState.tableHeroes.page = newState.tableHeroes.lastSize; //
+        newState.tableHeroes.page = newState.tableHeroes.lastSize;
         return newState;
         break;
       case "GO_TO_NEXT_PAGE":
@@ -38,6 +38,5 @@ function reducer(estado, accion) {
     return defaultState;
   }
 }
-
 
 export default reducer;
