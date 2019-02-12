@@ -7,8 +7,18 @@ import { actionGoToPrevPage } from "../../actions/go-to-prev-page";
 import { actionLengthSelect } from "../../actions/length-select";
 import { actionSearchHero } from "../../actions/search-hero";
 import { aselectHero } from "../../actions/select-hero";
+import { connect } from "react-redux";
+
+const reduxFactory = connect(
+  selectorHeroesTable,
+  dispatchersTableHeroes
+);
 
 class HeroesTable extends Component {
+  constructor(props) {
+    super(props);
+    console.log(props);
+  }
   render() {
     return <Table />;
   }
@@ -37,4 +47,4 @@ function dispatchersTableHeroes(dispatcher) {
   };
 }
 
-export default HeroesTable;
+export default reduxFactory(HeroesTable);
